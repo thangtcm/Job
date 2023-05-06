@@ -674,3 +674,10 @@ transform: translateY(59px) !important;
       height: 60px;
     }
   }
+
+  .nav-tabs .nav-link:hover {
+    background-color: #eeeeee;
+    border-color: transparent;
+    color: #333;
+    border-radius: 0;
+}
