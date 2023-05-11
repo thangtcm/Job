@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Link to DataTables CSS -->
+    <link href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <!-- Link to DateTimePicker CSS -->
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/css/tempusdominus-bootstrap-4.min.css"
+        rel="stylesheet">
+    <!-- Link to FontAwesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!-- Liên kết Boostrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light px-4 px-lg-5">
+            <div class="container">
+                <a href="index.html" class="navbar-brand d-flex align-items-center">
+                    <img class="img-fluid me-2" src="./assets/images/Logo-UEF.png" alt="" style="width: 80px;">
+                </a>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#sidebar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse">
+                    <div class="ms-5 navbar-nav py-4 py-lg-0">
+                        <a href="index.html" class="nav-item nav-link nav-hover active">Trang chủ</a>
+                        <a href="job.html" class="nav-item nav-link nav-hover">Tìm Việc Làm</a>
+                        <a href="company.html" class="nav-item nav-link nav-hover">Công ty</a>
+                    </div>
+                    <ul class="nav nav-tabs ms-auto user-menu">
+                        <li class="nav-item dropdown flag-nav dropdown-heads">
+                            <a class="nav-link" href="#" data-bs-toggle="dropdown" role="button"
+                                style="font-size: 1.5rem;">
+                                <i class="far fa-bell"></i>
+                                <span class="badge rounded-pill"></span>
+                            </a>
+                            <div class="dropdown-menu notifications" data-bs-popper="bottom-end">
+                                <div class="topnav-dropdown-header">
+                                    <span class="notification-title">Notifications</span>
+                                    <a href="javascript:void(0)" class="clear-noti"> Clear All</a>
+                                </div>
+                                <div class="noti-content">
+                                    <ul class="notification-list">
+                                        <li class="notification-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar avatar-sm">
+                                                        <img class="avatar-img rounded-circle" alt=""
+                                                            src="./assets/images/avatar.jpg">
+                                                    </span>
+                                                    <div class="media-body">
+                                                        <p class="noti-details"><span class="noti-title">Brian
+                                                                Johnson</span>
+                                                            paid the invoice <span class="noti-title">#DF65485</span>
+                                                        </p>
+                                                        <p class="noti-time"><span class="notification-time">4 mins
+                                                                ago</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="notification-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar avatar-sm">
+                                                        <img class="avatar-img rounded-circle" alt=""
+                                                            src="./assets/images/avatarpatient.jpg">
+                                                    </span>
+                                                    <div class="media-body">
+                                                        <p class="noti-details"><span class="noti-title">Marie
+                                                                Canales</span>
+                                                            has accepted your estimate <span
+                                                                class="noti-title">#GTR458789</span></p>
+                                                        <p class="noti-time"><span class="notification-time">6 mins
+                                                                ago</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="notification-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <div class="avatar avatar-sm">
+                                                        <span class="avatar-title rounded-circle bg-primary-light"><i
+                                                                class="far fa-user"></i></span>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <p class="noti-details"><span class="noti-title">New user
+                                                                registered</span></p>
+                                                        <p class="noti-time"><span class="notification-time">8 mins
+                                                                ago</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="notification-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar avatar-sm">
+                                                        <img class="avatar-img rounded-circle" alt=""
+                                                            src="./assets/images/avatarpatient.jpg">
+                                                    </span>
+                                                    <div class="media-body">
+                                                        <p class="noti-details"><span class="noti-title">Barbara
+                                                                Moore</span>
+                                                            declined the invoice <span
+                                                                class="noti-title">#RDW026896</span></p>
+                                                        <p class="noti-time"><span class="notification-time">12 mins
+                                                                ago</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="notification-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <div class="avatar avatar-sm">
+                                                        <span class="avatar-title rounded-circle bg-info-light"><i
+                                                                class="far fa-comment"></i></span>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <p class="noti-details"><span class="noti-title">You have
+                                                                received a new
+                                                                message</span></p>
+                                                        <p class="noti-time"><span class="notification-time">2 days
+                                                                ago</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="topnav-dropdown-footer">
+                                    <a href="#">View all
+                                        Notifications</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="javascript:void(0)" class="user-link nav-link" data-bs-toggle="dropdown">
+                                <span class="user-img">
+                                    <img src="./assets/images/avatarpatient.jpg" alt="img" class="profilesidebar">
+                                    <span class="animate-circle"></span>
+                                </span>
+                                <span class="user-content">
+                                    <span class="user-details">Admin</span>
+                                    <span class="user-name">Trần Cao Minh Thắng</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu menu-drop-user" style="width: 100%;">
+                                <div class="profilemenu">
+                                    <div class="subscription-menu">
+                                        <ul>
+                                            <li>
+                                                <a class="dropdown-item" href="">Profile</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" href="">Settings</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="subscription-logout">
+                                        <ul>
+                                            <li class="pb-0">
+                                                <a class="dropdown-item" href="">Log
+                                                    Out</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <main class="page-wrapper">
+        <div class="content container">
+            <div class="page-header">
+                <div class="row align-items-center mt-5">
+                    <div class="col">
+                        <h3 class="page-title">Doanh Nghiệp</h3>
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="">Dashboard</a>
+                            </li>
+                            <li class="breadcrumb-item active">Doanh Nghiệp</li>
+                        </ul>
+                    </div>
+                    <div class="col-auto">
+                        <a href="" class="btn btn-primary me-1">
+                            <i class="fas fa-plus"></i>
+                        </a>
+                        <a class="btn btn-primary filter-btn" href="javascript:void(0);" id="filter_search">
+                            <i class="fas fa-filter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+                    <div class="form-group has-search">
+                        <span class="fa fa-search form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Tìm kiếm việc làm">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group has-search">
+                        <span class="fas fa-map-marker-alt form-control-feedback"></span>
+                        <input type="text" class="form-control" placeholder="Thêm quốc gia hoặc thành phố">
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary">Tìm Kiếm</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="filter_inputs" class="card-company shadow-sm search-input filter-card" style="display: none;">
+                <div class="card-body pb-0">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <ul class="app-listing">
+                                <li>
+                                    <div class="multipleSelection">
+                                        <div class="selectbox">
+                                            <p class="mb-0">
+                                                <i class="fas fa-briefcase m-2"></i>
+                                                Loại công việc
+                                            </p>
+                                            <p class="mb-0"><i class="fas fa-chevron-down m-2"></i></p>
+                                        </div>
+                                        <div id="checkboxes">
+                                            <form action="">
+                                                <p class="checkbox-title">Loại công việc</p>
+                                                <div class="selectbox-cont mb-2">
+                                                    <label class="custom_check w-100">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span> Thực Tập
+                                                    </label>
+                                                    <label class="custom_check w-100">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span> Việc làm fulltime
+                                                    </label>
+                                                    <label class="custom_check w-100">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span> Việc làm bán thời gian
+                                                    </label>
+                                                    <label class="custom_check w-100">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span> Việc làm freelance
+                                                    </label>
+                                                </div>
+                                                <button type="reset" class="btn w-100 btn-grey">Reset</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="multipleSelection">
+                                        <div class="selectbox">
+                                            <p class="mb-0">
+                                                <i class="fas fa-city m-2"></i>
+                                                Thành phố
+                                            </p>
+                                            <p class="mb-0"><i class="fas fa-chevron-down m-2"></i></p>
+                                        </div>
+                                        <div id="checkboxes">
+                                            <form action="">
+                                                <p class="checkbox-title">Thành phố</p>
+                                                <div class="form-group mb-3">
+                                                    <input type="text" class="form-control bg-grey"
+                                                        placeholder="Enter Name's City">
+                                                </div>
+                                                <div class="selectbox-cont mb-2">
+                                                    <label class="custom_check w-100">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span> Ho Chi Minh City, Vietnam
+                                                    </label>
+                                                    <label class="custom_check w-100">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span> Hà Nội, Vietnam
+                                                    </label>
+                                                    <label class="custom_check w-100">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span> Da Nang, Vietnam
+                                                    </label>
+                                                    <label class="custom_check w-100">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span> Bình Dương, Vietnam
+                                                    </label>
+                                                    <label class="custom_check w-100">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span> Hải Phòng, Vietnam
+                                                    </label>
+                                                </div>
+                                                <button type="reset" class="btn w-100 btn-grey">Reset</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="multipleSelection">
+                                        <div class="selectbox">
+                                            <p class="mb-0">
+                                                <i class="fas fa-allergies m-2"></i>
+                                                Kinh Nghiệm
+                                            </p>
+                                            <p class="mb-0"><i class="fas fa-chevron-down m-2"></i></p>
+                                        </div>
+                                        <div id="checkboxes">
+                                            <form action="">
+                                                <p class="checkbox-title">Kinh Nghiệm</p>
+                                                <div class="selectbox-cont mb-2">
+                                                    <label class="custom_check w-100">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span> Ít hơn 1 năm
+                                                    </label>
+                                                    <label class="custom_check w-100">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span> Từ 1-3 năm
+                                                    </label>
+                                                    <label class="custom_check w-100">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span> Từ 3-5 năm
+                                                    </label>
+                                                    <label class="custom_check w-100">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span> Từ 5-10 năm
+                                                    </label>
+                                                    <label class="custom_check w-100">
+                                                        <input type="checkbox">
+                                                        <span class="checkmark"></span> Hơn 10 năm
+                                                    </label>
+                                                    <label class="w-100">
+                                                        <div class="form-check form-switch">
+                                                            <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                                                            <label class="form-check-label" for="flexSwitchCheckChecked">Loại
+                                                                trừ các công việc không có kinh nghiệm được liệt
+                                                                kê</label>
+                                                          </div>
+                                                    </label>
+
+                                                </div>
+                                                <button type="reset" class="btn w-100 btn-grey">Reset</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="multipleSelection">
+                                        <div class="selectbox">
+                                            <p class="mb-0">
+                                                <i class="fas fa-clock m-2"></i>
+                                                Cập nhật lần cuối
+                                            </p>
+                                            <p class="mb-0"><i class="fas fa-chevron-down m-2"></i></p>
+                                        </div>
+                                        <div id="checkboxes">
+                                            <form action="">
+                                                <p class="checkbox-title">Cập nhật lần cuối</p>
+                                                <div class="selectbox-cont mb-2">
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                                        <label class="form-check-label" for="exampleRadios1">
+                                                            24 giờ trước
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                                        <label class="form-check-label" for="exampleRadios2">
+                                                          Tuần trước
+                                                        </label>
+                                                    </div>
+
+                                                    <div class="form-check">
+                                                        <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3">
+                                                        <label class="form-check-label" for="exampleRadios3">
+                                                          Tháng trước
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 col-xl-4 col-sm-12 d-flex">
+                    <div class="card-company grid-card flex-fill">
+                        <div class="card-image">
+                            <a href="">
+                                <img src="./assets/images/blog-2.jpg" alt="">
+                            </a>
+                            <div class="card-views">
+                                <i class="far fa-eye m-1"></i> 5
+                            </div>
+                        </div>
+                        <div class="card-body text-center" style="padding: 0">
+                            <ul class="entry-meta meta-item">
+                                <li>
+                                    <div class="post-author">
+                                        <a href="">
+                                            <img src="./assets/images/Logo-UEF.png" alt="Post Author">
+                                            <span>
+                                                <span class="post-title">Đại học kinh tế - tài chính thành phố Hồ Chí
+                                                    Minh</span>
+                                                <span class="post-date"><i class="far fa-clock"></i> 29 April
+                                                    2023</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="card-decription">
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-map-marker-alt m-2"></i>
+                                    Ho Chi Minh City
+                                </p>
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-dollar-sign m-2"></i>
+                                    20.000.000 - 50.000.000 VND
+                                </p>
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-briefcase m-2"></i>
+                                    Từ 3-5 năm kinh nghiệm
+                                </p>
+                                <div class="row" style="margin: 1.5rem 0 0">
+                                    <span class="post-date m-2"><i class="far fa-clock mr-2"></i>Cập nhật 2 ngày
+                                        trước</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 col-sm-12 d-flex">
+                    <div class="card-company grid-card flex-fill">
+                        <div class="card-image">
+                            <a href="">
+                                <img src="./assets/images/blog-7.jpg" alt="">
+                            </a>
+                            <div class="card-views">
+                                <i class="far fa-eye m-1"></i> 5
+                            </div>
+                        </div>
+                        <div class="card-body text-center" style="padding: 0">
+                            <ul class="entry-meta meta-item">
+                                <li>
+                                    <div class="post-author">
+                                        <a href="">
+                                            <img src="./assets/images/Logo-UEF.png" alt="Post Author">
+                                            <span>
+                                                <span class="post-title">Đại học kinh tế - tài chính thành phố Hồ Chí
+                                                    Minh</span>
+                                                <span class="post-date"><i class="far fa-clock"></i> 29 April
+                                                    2023</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="card-decription">
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-map-marker-alt m-2"></i>
+                                    Ho Chi Minh City
+                                </p>
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-dollar-sign m-2"></i>
+                                    20.000.000 - 50.000.000 VND
+                                </p>
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-briefcase m-2"></i>
+                                    Từ 3-5 năm kinh nghiệm
+                                </p>
+                                <div class="row" style="margin: 1.5rem 0 0">
+                                    <span class="post-date m-2"><i class="far fa-clock mr-2"></i>Cập nhật 2 ngày
+                                        trước</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 col-sm-12 d-flex">
+                    <div class="card-company grid-card flex-fill">
+                        <div class="card-image">
+                            <a href="">
+                                <img src="./assets/images/blog-6.jpg" alt="">
+                            </a>
+                            <div class="card-views">
+                                <i class="far fa-eye m-1"></i> 5
+                            </div>
+                        </div>
+                        <div class="card-body text-center" style="padding: 0">
+                            <ul class="entry-meta meta-item">
+                                <li>
+                                    <div class="post-author">
+                                        <a href="">
+                                            <img src="./assets/images/Logo-UEF.png" alt="Post Author">
+                                            <span>
+                                                <span class="post-title">Đại học kinh tế - tài chính thành phố Hồ Chí
+                                                    Minh</span>
+                                                <span class="post-date"><i class="far fa-clock"></i> 29 April
+                                                    2023</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="card-decription">
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-map-marker-alt m-2"></i>
+                                    Ho Chi Minh City
+                                </p>
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-dollar-sign m-2"></i>
+                                    20.000.000 - 50.000.000 VND
+                                </p>
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-briefcase m-2"></i>
+                                    Từ 3-5 năm kinh nghiệm
+                                </p>
+                                <div class="row" style="margin: 1.5rem 0 0">
+                                    <span class="post-date m-2"><i class="far fa-clock mr-2"></i>Cập nhật 2 ngày
+                                        trước</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 col-sm-12 d-flex">
+                    <div class="card-company grid-card flex-fill">
+                        <div class="card-image">
+                            <a href="">
+                                <img src="./assets/images/blog-7.jpg" alt="">
+                            </a>
+                            <div class="card-views">
+                                <i class="far fa-eye m-1"></i> 5
+                            </div>
+                        </div>
+                        <div class="card-body text-center" style="padding: 0">
+                            <ul class="entry-meta meta-item">
+                                <li>
+                                    <div class="post-author">
+                                        <a href="">
+                                            <img src="./assets/images/Logo-UEF.png" alt="Post Author">
+                                            <span>
+                                                <span class="post-title">Đại học kinh tế - tài chính thành phố Hồ Chí
+                                                    Minh</span>
+                                                <span class="post-date"><i class="far fa-clock"></i> 29 April
+                                                    2023</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="card-decription">
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-map-marker-alt m-2"></i>
+                                    Ho Chi Minh City
+                                </p>
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-dollar-sign m-2"></i>
+                                    20.000.000 - 50.000.000 VND
+                                </p>
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-briefcase m-2"></i>
+                                    Từ 3-5 năm kinh nghiệm
+                                </p>
+                                <div class="row" style="margin: 1.5rem 0 0">
+                                    <span class="post-date m-2"><i class="far fa-clock mr-2"></i>Cập nhật 2 ngày
+                                        trước</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 col-sm-12 d-flex">
+                    <div class="card-company grid-card flex-fill">
+                        <div class="card-image">
+                            <a href="">
+                                <img src="./assets/images/blog-4.jpg" alt="">
+                            </a>
+                            <div class="card-views">
+                                <i class="far fa-eye m-1"></i> 5
+                            </div>
+                        </div>
+                        <div class="card-body text-center" style="padding: 0">
+                            <ul class="entry-meta meta-item">
+                                <li>
+                                    <div class="post-author">
+                                        <a href="">
+                                            <img src="./assets/images/Logo-UEF.png" alt="Post Author">
+                                            <span>
+                                                <span class="post-title">Đại học kinh tế - tài chính thành phố Hồ Chí
+                                                    Minh</span>
+                                                <span class="post-date"><i class="far fa-clock"></i> 29 April
+                                                    2023</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="card-decription">
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-map-marker-alt m-2"></i>
+                                    Ho Chi Minh City
+                                </p>
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-dollar-sign m-2"></i>
+                                    20.000.000 - 50.000.000 VND
+                                </p>
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-briefcase m-2"></i>
+                                    Từ 3-5 năm kinh nghiệm
+                                </p>
+                                <div class="row" style="margin: 1.5rem 0 0">
+                                    <span class="post-date m-2"><i class="far fa-clock mr-2"></i>Cập nhật 2 ngày
+                                        trước</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-4 col-sm-12 d-flex">
+                    <div class="card-company grid-card flex-fill">
+                        <div class="card-image">
+                            <a href="">
+                                <img src="./assets/images/blog-6.jpg" alt="">
+                            </a>
+                            <div class="card-views">
+                                <i class="far fa-eye m-1"></i> 5
+                            </div>
+                        </div>
+                        <div class="card-body text-center" style="padding: 0">
+                            <ul class="entry-meta meta-item">
+                                <li>
+                                    <div class="post-author">
+                                        <a href="">
+                                            <img src="./assets/images/Logo-UEF.png" alt="Post Author">
+                                            <span>
+                                                <span class="post-title">Đại học kinh tế - tài chính thành phố Hồ Chí
+                                                    Minh</span>
+                                                <span class="post-date"><i class="far fa-clock"></i> 29 April
+                                                    2023</span>
+                                            </span>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="card-decription">
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-map-marker-alt m-2"></i>
+                                    Ho Chi Minh City
+                                </p>
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-dollar-sign m-2"></i>
+                                    20.000.000 - 50.000.000 VND
+                                </p>
+                                <p class="card-text" style="margin-bottom: 0.3rem;">
+                                    <i class="fas fa-briefcase m-2"></i>
+                                    Từ 3-5 năm kinh nghiệm
+                                </p>
+                                <div class="row" style="margin: 1.5rem 0 0">
+                                    <span class="post-date m-2"><i class="far fa-clock mr-2"></i>Cập nhật 2 ngày
+                                        trước</span>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-12">
+                    <div class="pagination-tab  d-flex justify-content-center">
+                        <ul class="pagination mb-0">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1"><i
+                                        class="feather-chevron-left mr-2"></i>Previous</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Next<i class="feather-chevron-right ml-2"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+    <a href="index.html" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top" style="display: none;">
+        <i class="fas fa-arrow-to-top"></i>
+    </a>
+
+    <!-- Script -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
+    <!-- Add DateTimePicker JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.39.0/js/tempusdominus-bootstrap-4.min.js"></script>
+    <!-- Add Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

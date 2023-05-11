@@ -14,170 +14,173 @@
     <!-- Liên kết Boostrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 <body>
-    <div class="main-wrapper">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white navbar-light px-4 px-lg-5">
+            <div class="container">
                 <a href="index.html" class="navbar-brand d-flex align-items-center">
                     <img class="img-fluid me-2" src="./assets/images/Logo-UEF.png" alt="" style="width: 80px;">
                 </a>
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#sidebar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-nav mx-auto py-4 py-lg-0">
-                        <a href="index.html" class="nav-item nav-link nav-hover active">Home</a>
-                        <a href="findjob.html" class="nav-item nav-link nav-hover">Tìm Việc Làm</a>
+                <div class="navbar-collapse collapse">
+                    <div class="ms-5 navbar-nav py-4 py-lg-0">
+                        <a href="index.html" class="nav-item nav-link nav-hover active">Trang chủ</a>
+                        <a href="job.html" class="nav-item nav-link nav-hover">Tìm Việc Làm</a>
                         <a href="company.html" class="nav-item nav-link nav-hover">Công ty</a>
+                    </div>
+                    <ul class="nav nav-tabs ms-auto user-menu">
+                        <li class="nav-item dropdown flag-nav dropdown-heads">
+                            <a class="nav-link" href="#" 
+                            data-bs-toggle="dropdown" role="button" style="font-size: 1.5rem;">
+                                <i class="far fa-bell"></i>
+                                <span class="badge rounded-pill"></span>
+                            </a>
+                            <div class="dropdown-menu notifications" data-bs-popper="bottom-end">
+                                <div class="topnav-dropdown-header">
+                                    <span class="notification-title">Notifications</span>
+                                    <a href="javascript:void(0)" class="clear-noti"> Clear All</a>
+                                </div>
+                                <div class="noti-content">
+                                    <ul class="notification-list">
+                                        <li class="notification-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar avatar-sm">
+                                                        <img class="avatar-img rounded-circle" alt=""
+                                                            src="./assets/images/avatar.jpg">
+                                                    </span>
+                                                    <div class="media-body">
+                                                        <p class="noti-details"><span class="noti-title">Brian Johnson</span>
+                                                            paid the invoice <span class="noti-title">#DF65485</span></p>
+                                                        <p class="noti-time"><span class="notification-time">4 mins ago</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="notification-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar avatar-sm">
+                                                        <img class="avatar-img rounded-circle" alt=""
+                                                            src="./assets/images/avatarpatient.jpg">
+                                                    </span>
+                                                    <div class="media-body">
+                                                        <p class="noti-details"><span class="noti-title">Marie Canales</span>
+                                                            has accepted your estimate <span
+                                                                class="noti-title">#GTR458789</span></p>
+                                                        <p class="noti-time"><span class="notification-time">6 mins ago</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="notification-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <div class="avatar avatar-sm">
+                                                        <span class="avatar-title rounded-circle bg-primary-light"><i
+                                                                class="far fa-user"></i></span>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <p class="noti-details"><span class="noti-title">New user
+                                                                registered</span></p>
+                                                        <p class="noti-time"><span class="notification-time">8 mins ago</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="notification-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <span class="avatar avatar-sm">
+                                                        <img class="avatar-img rounded-circle" alt=""
+                                                            src="./assets/images/avatarpatient.jpg">
+                                                    </span>
+                                                    <div class="media-body">
+                                                        <p class="noti-details"><span class="noti-title">Barbara Moore</span>
+                                                            declined the invoice <span class="noti-title">#RDW026896</span></p>
+                                                        <p class="noti-time"><span class="notification-time">12 mins ago</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="notification-message">
+                                            <a href="#">
+                                                <div class="media d-flex">
+                                                    <div class="avatar avatar-sm">
+                                                        <span class="avatar-title rounded-circle bg-info-light"><i
+                                                                class="far fa-comment"></i></span>
+                                                    </div>
+                                                    <div class="media-body">
+                                                        <p class="noti-details"><span class="noti-title">You have received a new
+                                                                message</span></p>
+                                                        <p class="noti-time"><span class="notification-time">2 days ago</span>
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="topnav-dropdown-footer">
+                                    <a href="#">View all
+                                        Notifications</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="javascript:void(0)" class="user-link nav-link" data-bs-toggle="dropdown">
+                                <span class="user-img">
+                                    <img src="./assets/images/avatarpatient.jpg" alt="img"
+                                        class="profilesidebar">
+                                    <span class="animate-circle"></span>
+                                </span>
+                                <span class="user-content">
+                                    <span class="user-details">Admin</span>
+                                    <span class="user-name">Trần Cao Minh Thắng</span>
+                                </span>
+                            </a>
+                            <div class="dropdown-menu menu-drop-user" style="width: 100%;">
+                                <div class="profilemenu">
+                                    <div class="subscription-menu">
+                                        <ul>
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="">Profile</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item"
+                                                    href="">Settings</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="subscription-logout">
+                                        <ul>
+                                            <li class="pb-0">
+                                                <a class="dropdown-item"
+                                                    href="">Log
+                                                    Out</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul> 
                 </div>
-                <ul class="nav nav-tabs ms-auto user-menu">
-                    <li class="nav-item dropdown flag-nav dropdown-heads">
-                        <a class="nav-link" href="#" 
-                        data-bs-toggle="dropdown" role="button" style="font-size: 1.5rem;">
-                            <i class="far fa-bell"></i>
-                            <span class="badge rounded-pill"></span>
-                        </a>
-                        <div class="dropdown-menu notifications" data-bs-popper="bottom-end">
-                            <div class="topnav-dropdown-header">
-                                <span class="notification-title">Notifications</span>
-                                <a href="javascript:void(0)" class="clear-noti"> Clear All</a>
-                            </div>
-                            <div class="noti-content">
-                                <ul class="notification-list">
-                                    <li class="notification-message">
-                                        <a href="https://kanakku.dreamguystech.com/html/template/profile.html">
-                                            <div class="media d-flex">
-                                                <span class="avatar avatar-sm">
-                                                    <img class="avatar-img rounded-circle" alt=""
-                                                        src="./assets/images/avatar.jpg">
-                                                </span>
-                                                <div class="media-body">
-                                                    <p class="noti-details"><span class="noti-title">Brian Johnson</span>
-                                                        paid the invoice <span class="noti-title">#DF65485</span></p>
-                                                    <p class="noti-time"><span class="notification-time">4 mins ago</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="notification-message">
-                                        <a href="https://kanakku.dreamguystech.com/html/template/profile.html">
-                                            <div class="media d-flex">
-                                                <span class="avatar avatar-sm">
-                                                    <img class="avatar-img rounded-circle" alt=""
-                                                        src="./assets/images/avatarpatient.jpg">
-                                                </span>
-                                                <div class="media-body">
-                                                    <p class="noti-details"><span class="noti-title">Marie Canales</span>
-                                                        has accepted your estimate <span
-                                                            class="noti-title">#GTR458789</span></p>
-                                                    <p class="noti-time"><span class="notification-time">6 mins ago</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="notification-message">
-                                        <a href="https://kanakku.dreamguystech.com/html/template/profile.html">
-                                            <div class="media d-flex">
-                                                <div class="avatar avatar-sm">
-                                                    <span class="avatar-title rounded-circle bg-primary-light"><i
-                                                            class="far fa-user"></i></span>
-                                                </div>
-                                                <div class="media-body">
-                                                    <p class="noti-details"><span class="noti-title">New user
-                                                            registered</span></p>
-                                                    <p class="noti-time"><span class="notification-time">8 mins ago</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="notification-message">
-                                        <a href="https://kanakku.dreamguystech.com/html/template/profile.html">
-                                            <div class="media d-flex">
-                                                <span class="avatar avatar-sm">
-                                                    <img class="avatar-img rounded-circle" alt=""
-                                                        src="./assets/images/avatarpatient.jpg">
-                                                </span>
-                                                <div class="media-body">
-                                                    <p class="noti-details"><span class="noti-title">Barbara Moore</span>
-                                                        declined the invoice <span class="noti-title">#RDW026896</span></p>
-                                                    <p class="noti-time"><span class="notification-time">12 mins ago</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li class="notification-message">
-                                        <a href="https://kanakku.dreamguystech.com/html/template/profile.html">
-                                            <div class="media d-flex">
-                                                <div class="avatar avatar-sm">
-                                                    <span class="avatar-title rounded-circle bg-info-light"><i
-                                                            class="far fa-comment"></i></span>
-                                                </div>
-                                                <div class="media-body">
-                                                    <p class="noti-details"><span class="noti-title">You have received a new
-                                                            message</span></p>
-                                                    <p class="noti-time"><span class="notification-time">2 days ago</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="topnav-dropdown-footer">
-                                <a href="https://kanakku.dreamguystech.com/html/template/notifications.html">View all
-                                    Notifications</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a href="javascript:void(0)" class="user-link  nav-link" data-bs-toggle="dropdown">
-                            <span class="user-img">
-                                <img src="./assets/images/avatarpatient.jpg" alt="img"
-                                    class="profilesidebar">
-                                <span class="animate-circle"></span>
-                            </span>
-                            <span class="user-content">
-                                <span class="user-details">Admin</span>
-                                <span class="user-name">Trần Cao Minh Thắng</span>
-                            </span>
-                        </a>
-                        <div class="dropdown-menu menu-drop-user">
-                            <div class="profilemenu">
-                                <div class="subscription-menu">
-                                    <ul>
-                                        <li>
-                                            <a class="dropdown-item"
-                                                href="">Profile</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item"
-                                                href="">Settings</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="subscription-logout">
-                                    <ul>
-                                        <li class="pb-0">
-                                            <a class="dropdown-item"
-                                                href="">Log
-                                                Out</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>     
-            </nav>
-        </div>
-        
-        <header class="header header-one"></header>
-
-    </div>
+                    
+            </div>
+        </nav>
+    </header>
+    <main class="page-wrapper">
+    </main>
 
     <a href="index.html" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top" style="display: none;"><i class="bi bi-arrow-up"></i></a>
 
