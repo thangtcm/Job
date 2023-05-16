@@ -80,9 +80,3 @@ $(document).ready(function () {
 		  $('#wrapper').toggleClass('toggled');
 	});  
   });
-
-  $(document).ready(function() {
-	$('input').tagsinput({
-		template: '<span class="tag badge badge-info"><span data-role="remove"></span></span>'
-	});
-});
