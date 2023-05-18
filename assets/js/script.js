@@ -80,3 +80,27 @@ $(document).ready(function () {
 		  $('#wrapper').toggleClass('toggled');
 	});  
   });
+
+CKEDITOR.replace('editor1'); // Khởi tạo bảng soạn nội dung CKEditor
+
+$(document).ready(function() {
+    $('#citySelect').select2();
+});
+
+$(document).ready(function() {
+    $('#experience').select2();
+});
+
+
+fetch('https://provinces.open-api.vn/api/?depth=1')
+    .then(response => response.json())
+    .then(data => {
+      // Lặp qua danh sách các tỉnh/thành phố và thêm các tùy chọn vào trong trường chọn HTML
+      data.forEach(city => {
+        const option = document.createElement('option');
+        option.value = city.code; // Truy xuất thuộc tính "code" của đối tượng JSON
+        option.text = city.name; // Truy xuất thuộc tính "name" của đối tượng JSON
+        document.getElementById('citySelect').appendChild(option);
+      });
+    })
+    .catch(error => console.error(error));

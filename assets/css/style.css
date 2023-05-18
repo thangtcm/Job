@@ -20,6 +20,18 @@ html { height: 100%;}
 body {
   position: relative;
   overflow-x: hidden;
+  background-color: #f7f8f9;
+  color: #455560;
+  font-family: 'CircularStd', sans-serif;
+  font-size: 0.9375rem;
+  height: 100%;
+  line-height: 1.5;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	font-family: 'CircularStd', sans-serif;
+	margin-top: 0;
+	color: #2c3038;
 }
 
 .form-group {
@@ -152,12 +164,32 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
   vertical-align: baseline;
+}
+
+* {
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 a {
   text-decoration: none !important;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+p:last-child {
+  padding: 0 0;
+}
+
+strong {
+  font-weight: 700;
 }
 
 .back-to-top {
@@ -375,6 +407,43 @@ li>a {
   white-space: nowrap;
   margin: 0 10px 0 0;
   border-radius: 50%;
+}
+
+.profile-cover-avatar input[type=file] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 33, 68, 0.25);
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  border-radius: 50%;
+}
+
+.avatar-edit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: #677788;
+  background-color: #fff;
+  box-shadow: 0 3px 6px 0 rgba(140, 152, 164, 0.25);
+  border-radius: 50%;
+  -webkit-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.avatar-edit svg {
+  width: 18px;
 }
 
 .avatar.avatar-xs {
@@ -921,6 +990,13 @@ ul {
 
 
 /* Card Company */
+.card-buttons .card-text {
+  margin-bottom: 10px;
+}
+.card-buttons .header-title {
+  margin-bottom: 10px;
+}
+
 .card-company {
   background: #fff;
   border-radius: 18px;
@@ -1844,6 +1920,43 @@ ul {
 }
 
 /* UI DESIGN */
+.change-photo-btn {
+  color: #7E84A3;
+  cursor: pointer;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 15px;
+  position: relative;
+  transition: .3s;
+  text-align: center;
+  height: 120px;
+  background: #FAFAFA;
+  border: 1px dashed #E1E1E1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  vertical-align: middle;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.change-photo-btn input.upload {
+  bottom: 0;
+  cursor: pointer;
+  filter: alpha(opacity=0);
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100px;
+  width: 100%;
+}
+
 .bootstrap-tagsinput {
   background-color: #fff;
   border: 1px solid #e3e3e3;
@@ -1898,4 +2011,180 @@ ul {
 
 .bootstrap-tagsinput .tag [data-role="remove"]:hover {
   box-shadow: none!important;
+}
+
+.bank-inner-details label {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/*-----------------
+	6. Select2
+-----------------------*/
+
+.select2-container .select2-selection--single {
+	border: 1px solid #ddd;
+	height: 40px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+	height: 38px;
+	right: 7px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+	border-color: #ddd transparent transparent;
+	border-style: solid;
+	border-width: 6px 6px 0;
+	height: 0;
+	left: 50%;
+	margin-left: -10px;
+	margin-top: -2px;
+	position: absolute;
+	top: 50%;
+	width: 0;
+}
+.select2-container--default.form-control-sm .select2-selection--single .select2-selection__arrow {
+    top: 7px;
+}
+.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+	border-color: transparent transparent #ddd;
+	border-width: 0 6px 6px;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+	padding-right: 30px;
+	padding-left: 15px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+	color: #333;
+	font-size: 15px;
+	font-weight: normal;
+	line-height: 38px;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+	background-color: #7638ff;
+}
+.select2-container--default .select2-selection--multiple {
+	border: 1px solid #ddd;
+	min-height: 40px;
+}
+
+
+
+/*
+    Card
+ 
+*/
+.card {
+  background: #fff;
+  -webkit-box-shadow: 0 0 13px 0 rgba(82,63,105,0.05);
+  box-shadow: 0 0 13px 0 rgba(82,63,105,0.05);
+  margin-bottom: 30px;
+  border-radius: 20px;
+  display: inline-block;
+  width: 100%;
+  border: 0;
+}
+.card-body {
+  position: relative;
+  padding: 1.5rem;
+}
+.card .card-header {
+border-color: #f0f1f5;
+background-color: #fff;
+padding: 1.5rem;
+}
+.card-header:first-child {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.card-footer:last-child {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.card-footer {
+background-color: #fff;
+border-top: 1px solid #e6e6e6;
+padding: 1rem;
+}
+.table .thead-light th {
+font-size: 16px;
+  color: #1B2559;
+  background-color: #f8f9fa;
+  border-color: #eff2f7;
+}
+.card .card-header .card-title {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+/*
+
+  Button
+
+ */
+
+.create-btn {
+  padding: 20px;
+}
+
+.bank-details-btn .btn {
+	min-width: 160px;
+	border-radius: 8px;
+	padding: 10px 0;
+	color: #fff;
+}
+.bank-details-btn .bank-cancel-btn {
+	background: #1B2559;
+}
+.bank-details-btn .bank-cancel-btn:hover {
+	background: #7638FF;
+}
+.bank-details-btn .bank-save-btn {
+	background: #7638FF;
+}
+.bank-details-btn .bank-save-btn:hover {
+	background: #1B2559;
+}
+
+
+
+.settings-menu {
+  margin-bottom: 30px;
+}
+.settings-menu ul {
+  display: block;
+  padding: 0;
+}
+.settings-menu ul li + li {
+  margin-top: 15px;
+}
+.settings-menu ul li a {
+  color: #1B2559;
+  padding: 0;
+  border: 0 !important;
+  display: flex;
+}
+.settings-menu ul li a.active {
+  color: var(--primary) !important;
+  border: 0;
+}
+.settings-menu ul li i {
+  margin-right: 10px;
+  font-size: 20px;
+  min-width: 25px;
+}
+
+.settings-menu ul li a:hover {
+  background-color: transparent !important;
+  border: 0 !important;
+}
+.settings-menu ul li a:focus {
+  background-color: transparent !important;
+  border: 0 !important;
+}
+
+.form-group label {
+  margin: 0 0 8px 0;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #282828;
 }

@@ -18,6 +18,24 @@
     .sidebar {
       width: 225px;
     }
+	.card {
+		margin-bottom: 0.9375rem;
+	}
+	.page-wrapper > .content {
+		padding: 0.9375rem 0.9375rem 0;
+	}
+	.chat-window {
+		margin-bottom: 0.9375rem;
+	}
+	.card-body {
+		padding: 1.25rem;
+	}
+	.card-header {
+		padding: .75rem 1.25rem;
+	}
+	.card-footer {
+		padding: .75rem 1.25rem;
+	}
     .page-header {
 		margin-bottom: 0.9375rem;
 	}
@@ -35,7 +53,33 @@
   }
 
   @media (max-width: 768px) {
-    
+    body {
+		font-size: 14px;
+	}
+	h1,
+	.h1 {
+		font-size: 2rem;
+	}
+	h2,
+	.h2 {
+		font-size: 1.75rem;
+	}
+	h3,
+	.h3 {
+		font-size: 1.5rem;
+	}
+	h4,
+	.h4 {
+		font-size: 1.125rem;
+	}
+	h5,
+	.h5 {
+		font-size: 1rem;
+	}
+	h6,
+	.h6 {
+		font-size: 0.975rem;
+	}
   }
 
 
